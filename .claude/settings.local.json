@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(du:*)",
-      "Bash(git ls-tree:*)",
-      "Bash(iconv:*)"
-    ]
-  }
-}
