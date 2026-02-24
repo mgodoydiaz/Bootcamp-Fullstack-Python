@@ -1,119 +1,288 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Miguel Godoy | Python Developer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV | Miguel Godoy Díaz</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="topNav">
-    <div class="container">
-      <a class="navbar-brand fw-semibold" href="#top">Miguel Godoy</a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks" aria-controls="navLinks" aria-expanded="false" aria-label="Toggle navigation">
+<body>
+
+  <!-- Navegación -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Miguel Godoy</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <div class="collapse navbar-collapse" id="navLinks">
-        <ul class="navbar-nav ms-auto gap-lg-1">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="#educacion">Educación</a></li>
+          <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
+          <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li class="nav-item">
+            <button id="theme-toggle" class="btn btn-outline-primary ms-2">
+              <i class="fas fa-moon"></i> Noche
+            </button>
+          </li>
         </ul>
-
-        <div class="d-flex ms-lg-3 gap-2 align-items-center">
-          <button class="btn btn-sm btn-outline-light" id="themeToggle" type="button" aria-label="Toggle theme">Theme</button>
-          <button class="btn btn-sm btn-light" id="accentShuffle" type="button" aria-label="Change accent">Accent</button>
-        </div>
       </div>
     </div>
   </nav>
 
-  <main id="top">
-    <!-- Hero -->
-    <header class="hero py-5">
-      <div class="container">
-        <div class="row g-4 align-items-center">
-          <div class="col-lg-8">
-            <p class="kicker mb-2">Python Developer</p>
-            <h1 class="display-5 fw-bold mb-3">Building reliable automation and data products with Python</h1>
-            <p class="lead mb-4">
-              Python engineer with 10+ years around analysis, automation, and scientific computing. Experienced in ETL pipelines,
-              reporting automation, and shipping internal tools that remove repetitive work.
-            </p>
+  <div class="container mt-5">
+    <!-- Sección: Sobre mí (Header) -->
+    <section id="sobre-mi" class="text-center reveal">
+      <!-- Usando el nombre de archivo subido, con fallback de error -->
+      <img src="assets/img/foto_perfil.jpg" alt="Miguel Godoy" class="profile-img mb-3"
+        onerror="this.src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'">
+      <h1 class="fw-bold">Miguel Andrés Godoy Díaz</h1>
+      <h4 class="text-muted mb-3">Ingeniero Civil Mecánico | Científico de Datos | FullStack Dev</h4>
+      <p class="lead mx-auto" style="max-width: 800px;">
+        Analista, Científico de datos y desarrollador Python. Me apasiona la modelación matemática, la optimización de
+        procesos y el desarrollo eficiente usando Inteligencia Artificial. Tengo altas capacidades de aprendizaje,
+        creatividad e hiperfoco para resolver problemas complejos.
+      </p>
+      <div class="d-flex justify-content-center gap-3 mt-3">
+        <a href="mailto:magodoydiaz@gmail.com" class="btn btn-danger"><i class="fas fa-envelope"></i> Email</a>
+        <a href="https://www.linkedin.com/in/magodoydiaz/" target="_blank" class="btn btn-primary"><i
+            class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/mgodoydiaz" target="_blank" class="btn btn-dark"><i class="fab fa-github"></i>
+          GitHub</a>
+      </div>
+    </section>
 
-            <div class="d-flex flex-wrap gap-2">
-              <a class="btn btn-primary" href="#projects">See projects</a>
-              <a class="btn btn-outline-primary" href="#contact">Contact me</a>
-              <a class="btn btn-outline-secondary" href="https://github.com/mgodoydiaz" target="_blank" rel="noreferrer">GitHub</a>
-              <a class="btn btn-outline-secondary" href="https://www.linkedin.com/in/magodoydiaz/" target="_blank" rel="noreferrer">LinkedIn</a>
-            </div>
+    <hr class="my-5">
 
-            <div class="mt-4 d-flex flex-wrap gap-2 small text-muted">
-              <span class="pill">Temuco, Chile</span>
-              <span class="pill">English C1</span>
-              <span class="pill">Open to remote</span>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="photo-card">
-              <div class="photo-placeholder" aria-label="Profile photo placeholder">
-                <img src="assets/img/foto_perfil.jpg" alt="Profile Photo" class="profile-img" />
-              </div>
-              <div class="pt-3">
-                <div class="fw-semibold">Miguel Andrés Godoy Díaz</div>
-                <div class="text-muted small">Python Developer, Automation, ETL, Reporting</div>
-              </div>
+    <!-- Sección: Educación -->
+    <section id="educacion" class="reveal">
+      <h2 class="fw-bold mb-4 border-bottom pb-2">Educación y Formación</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100 p-3 soft-card">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Ingeniería Civil Mecánica</h5>
+              <h6 class="card-subtitle mb-2 text-primary">Universidad Técnica Federico Santa María</h6>
+              <p class="card-text text-muted">2013 - 2021 | Valparaíso, Chile</p>
             </div>
           </div>
-
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100 p-3 soft-card">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Diplomados y Bootcamps</h5>
+              <ul class="list-unstyled mt-2">
+                <li><i class="fas fa-certificate text-warning"></i> <strong>Diplomado Data Engineer:</strong> USACH
+                  (2025)</li>
+                <li><i class="fas fa-certificate text-warning"></i> <strong>Diplomado Data Science:</strong> UDD / CORFO
+                  (2023)
+                </li>
+                <li><i class="fas fa-laptop-code text-primary"></i> <strong>Bootcamp:</strong> FullStack Python</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-    </header>
+    </section>
 
-    <!-- About -->
-    <section class="section" id="about">
-      <div class="container">
-        <div class="section-title">
-          <h2 class="h3 mb-1">About</h2>
-          <p class="text-muted mb-0">A quick snapshot of what I do and how I work.</p>
-        </div>
+    <hr class="my-5">
 
-        <div class="row g-4">
-          <div class="col-lg-7">
-            <div class="card soft-card">
-              <div class="card-body">
-                <p class="mb-2">
-                  I build Python systems that turn messy inputs into clean, trustworthy outputs.
-                  My typical work includes data extraction, transformations, validations, and producing dashboards or PDF reports.
-                </p>
-                <p class="mb-0">
-                  I like simple, modular codebases, clear naming, good logging, and fast iteration with Git.
-                  When it helps, I use AI tooling to accelerate development while keeping quality and traceability.
-                </p>
+    <!-- Sección: Habilidades -->
+    <section id="habilidades" class="reveal bg-soft">
+      <h2 class="fw-bold mb-4 border-bottom pb-2">Habilidades Técnicas</h2>
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="card soft-card h-100">
+            <div class="card-body">
+              <h3 class="h6 fw-bold mb-3">Lenguajes</h3>
+              <div class="tech-grid">
+                <span class="tech">Python</span>
+                <span class="tech">JavaScript</span>
+                <span class="tech">SQL</span>
+                <span class="tech">Bash Scripting</span>
+                <span class="tech">VBA</span>
+                <span class="tech">MATLAB</span>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="col-lg-5">
-            <div class="card soft-card">
-              <div class="card-body">
-                <h3 class="h6">Highlights</h3>
-                <ul class="mb-0">
-                  <li>ETL automation from spreadsheets and databases into Power BI and reports</li>
-                  <li>Reporting pipelines with Python and LaTeX</li>
-                  <li>Data classification workflows with local LLMs and ML</li>
-                  <li>Agile delivery, documentation, and stakeholder communication</li>
-                </ul>
+        <div class="col-lg-4">
+          <div class="card soft-card h-100">
+            <div class="card-body">
+              <h3 class="h6 fw-bold mb-3">Frameworks y Librerías</h3>
+              <div class="tech-grid">
+                <span class="tech">React</span>
+                <span class="tech">Django</span>
+                <span class="tech">Flask</span>
+                <span class="tech">FastAPI</span>
+                <span class="tech">Pandas</span>
+                <span class="tech">jQuery</span>
+                <span class="tech">Bootstrap</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card soft-card h-100">
+            <div class="card-body">
+              <h3 class="h6 fw-bold mb-3">Herramientas y Datos</h3>
+              <div class="tech-grid">
+                <span class="tech">Git / GitHub</span>
+                <span class="tech">Web Scraping</span>
+                <span class="tech">Power BI</span>
+                <span class="tech">DAX</span>
+                <span class="tech">PostgreSQL</span>
+                <span class="tech">LaTeX</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="my-5">
+
+    <!-- Sección: Experiencia -->
+    <section id="experiencia" class="reveal">
+      <h2 class="fw-bold mb-4 border-bottom pb-2">Experiencia Laboral</h2>
+      <div class="timeline">
+        <div class="card mb-3 p-3 soft-card">
+          <div class="card-body">
+            <div class="d-flex flex-wrap justify-content-between gap-2">
+              <div>
+                <h4 class="card-title fw-bold h5 mb-1">Consultor en Ingeniería</h4>
+                <h6 class="text-primary">Independiente</h6>
+              </div>
+              <div class="text-muted small">Ene 2025 - Actualidad</div>
+            </div>
+            <p class="card-text mt-2">Automatización de procesos y transformación digital como solución a problemas
+              específicos y tareas manuales de clientes.</p>
+          </div>
+        </div>
+
+        <div class="card mb-3 p-3 soft-card">
+          <div class="card-body">
+            <div class="d-flex flex-wrap justify-content-between gap-2">
+              <div>
+                <h4 class="card-title fw-bold h5 mb-1">Ingeniero de Proyectos, Customer Success</h4>
+                <h6 class="text-primary">FlexPay (SaaS)</h6>
+              </div>
+              <div class="text-muted small">Dic 2021 - Sep 2024</div>
+            </div>
+            <ul class="mt-3 mb-0">
+              <li>Liderazgo en proyectos de Transformación Digital e implementación de modelos de pago.</li>
+              <li>Migración tecnológica y desarrollo de funcionalidades con Ruby on Rails y JavaScript.</li>
+              <li>I+D en procesos de calidad, QA y estandarización de procesos de múltiples industrias.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card mb-3 p-3 soft-card">
+          <div class="card-body">
+            <div class="d-flex flex-wrap justify-content-between gap-2">
+              <div>
+                <h4 class="card-title fw-bold h5 mb-1">Coordinador y Tutor de Programación</h4>
+                <h6 class="text-primary">CIAC-UTFSM</h6>
+              </div>
+              <div class="text-muted small">Abr 2014 - Dic 2021</div>
+            </div>
+            <ul class="mt-3 mb-0">
+              <li>Coordinador de actividades académicas en automatización con Python y Excel.</li>
+              <li>Apoyo a cientos de estudiantes, incluyendo programas de inclusión y neurodivergencia.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="my-5">
+
+    <!-- Sección: Proyectos -->
+    <section id="proyectos" class="reveal">
+      <h2 class="fw-bold mb-4 border-bottom pb-2">Proyectos e Investigación</h2>
+      <div class="row g-4">
+
+        <div class="col-md-6">
+          <div class="card soft-card h-100">
+            <div class="card-body">
+              <h3 class="h5 fw-bold">Automatización de Reportes Académicos</h3>
+              <div class="text-muted small">Fundación People Help People</div>
+              <ul class="mt-3 mb-0">
+                <li>Pipeline de datos (ETL) desde planillas manuales hasta dashboards en Power BI.</li>
+                <li>Generación automática de informes, reduciendo tiempos de 2 semanas a 5 minutos.</li>
+              </ul>
+              <div class="mt-3 d-flex flex-wrap gap-2">
+                <span class="tag">Python</span>
+                <span class="tag">ETL</span>
+                <span class="tag">Power BI</span>
+                <span class="tag">LaTeX</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card soft-card h-100">
+            <div class="card-body">
+              <h3 class="h5 fw-bold">Clasificación de Atenciones Médicas</h3>
+              <div class="text-muted small">Proyecto Confidencial</div>
+              <ul class="mt-3 mb-0">
+                <li>Uso de LLMs locales y Machine Learning para clasificar atenciones de urgencia médica.</li>
+                <li>Extracción de datos epidemiológicos y estadísticos protegiendo la privacidad del paciente.</li>
+              </ul>
+              <div class="mt-3 d-flex flex-wrap gap-2">
+                <span class="tag">Python</span>
+                <span class="tag">LLMs</span>
+                <span class="tag">Machine Learning</span>
+                <span class="tag">APIs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card soft-card h-100">
+            <div class="card-body">
+              <h3 class="h5 fw-bold">PBJ: Poisson Boltzmann & Jupyter</h3>
+              <div class="text-muted small">Bem4solvation - UTFSM</div>
+              <ul class="mt-3 mb-0">
+                <li>Desarrollo inicial de un solver de una línea para modelos de biofísica computacional.</li>
+                <li>Integración para experimentación rápida y reproducibilidad.</li>
+              </ul>
+              <div class="mt-3 d-flex flex-wrap gap-2">
+                <span class="tag">Python</span>
+                <span class="tag">Computación Científica</span>
+                <span class="tag">Jupyter</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card soft-card h-100">
+            <div class="card-body">
+              <h3 class="h5 fw-bold">Cuantificación de Incertidumbre en Energías Electrostáticas</h3>
+              <div class="text-muted small">7° WONAPDE (UdeC)</div>
+              <ul class="mt-3 mb-0">
+                <li>Modelación de la agitación térmica de moléculas usando Pseudo y Cuasi Monte Carlo.</li>
+                <li>Análisis de correlaciones entre propiedades físicas para generar nuevas hipótesis.</li>
+              </ul>
+              <div class="mt-3 d-flex flex-wrap gap-2">
+                <span class="tag">Python</span>
+                <span class="tag">Monte Carlo</span>
+                <span class="tag">Modelación Matemática</span>
               </div>
             </div>
           </div>
@@ -122,343 +291,42 @@
       </div>
     </section>
 
-    <!-- Experience -->
-    <section class="section bg-soft" id="experience">
-      <div class="container">
-        <div class="section-title">
-          <h2 class="h3 mb-1">Experience</h2>
-          <p class="text-muted mb-0">Recent roles and impact.</p>
-        </div>
+    <hr class="my-5">
 
-        <div class="timeline">
-          <article class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content card soft-card">
-              <div class="card-body">
-                <div class="d-flex flex-wrap justify-content-between gap-2">
-                  <div>
-                    <h3 class="h5 mb-1">Engineering Consultant</h3>
-                    <div class="text-muted">Independent</div>
-                  </div>
-                  <div class="text-muted">Jan 2025 to Present</div>
-                </div>
-                <ul class="mt-3 mb-0">
-                  <li>Delivered Python automation for ETL, dashboards, and reporting for education and healthcare datasets</li>
-                  <li>Built reusable scripts and templates to reduce manual effort and improve consistency</li>
-                </ul>
-              </div>
-            </div>
-          </article>
-
-          <article class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content card soft-card">
-              <div class="card-body">
-                <div class="d-flex flex-wrap justify-content-between gap-2">
-                  <div>
-                    <h3 class="h5 mb-1">Project Engineer, Customer Success Implementer</h3>
-                    <div class="text-muted">FlexPay (SaaS), Santiago</div>
-                  </div>
-                  <div class="text-muted">Dec 2021 to Sep 2024</div>
-                </div>
-                <ul class="mt-3 mb-0">
-                  <li>Led digital transformation projects implementing complex payment models for enterprise clients</li>
-                  <li>Developed features in Ruby on Rails and JavaScript to improve scalability and UX</li>
-                  <li>Standardized internal processes and supported urgent client requests across multiple industries</li>
-                  <li>Contributed to QA, testing, and documentation for continuous improvement</li>
-                </ul>
-              </div>
-            </div>
-          </article>
-
-          <article class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content card soft-card">
-              <div class="card-body">
-                <div class="d-flex flex-wrap justify-content-between gap-2">
-                  <div>
-                    <h3 class="h5 mb-1">Teaching Assistant, Tutor and Programming Coordinator</h3>
-                    <div class="text-muted">CIAC UTFSM</div>
-                  </div>
-                  <div class="text-muted">Apr 2014 to Dec 2021</div>
-                </div>
-                <ul class="mt-3 mb-0">
-                  <li>Coordinated tutoring teams and taught Python and Excel automation workshops</li>
-                  <li>Supported hundreds of engineering students with strong feedback from faculty and students</li>
-                </ul>
-              </div>
-            </div>
-          </article>
-        </div>
-
+    <!-- Sección: Contacto (Formulario con validación jQuery) -->
+    <section id="contacto" class="reveal mb-5">
+      <h2 class="fw-bold mb-4 border-bottom pb-2">Contáctame</h2>
+      <div class="card p-4 soft-card">
+        <form id="contactForm">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre completo</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
+            <div class="text-danger small mt-1 d-none" id="errorNombre">El nombre es obligatorio.</div>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="email" placeholder="ejemplo@correo.com">
+            <div class="text-danger small mt-1 d-none" id="errorEmail">Ingresa un correo válido.</div>
+          </div>
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100" id="btnSubmit" disabled>Enviar Mensaje</button>
+          <div class="alert alert-success mt-3 d-none" id="successMsg">¡Mensaje validado correctamente! (Simulación)
+          </div>
+        </form>
       </div>
     </section>
+  </div>
 
-    <!-- Projects -->
-    <section class="section" id="projects">
-      <div class="container">
-        <div class="section-title">
-          <h2 class="h3 mb-1">Projects</h2>
-          <p class="text-muted mb-0">Selected work focused on Python delivery.</p>
-        </div>
-
-        <div class="row g-4">
-          <div class="col-md-6">
-            <div class="card soft-card h-100">
-              <div class="card-body">
-                <h3 class="h5">Academic test reporting automation</h3>
-                <div class="text-muted">People Help People Foundation, Panguipulli</div>
-                <ul class="mt-3 mb-0">
-                  <li>Automated ETL from spreadsheets and databases into Power BI dashboards and LaTeX reports</li>
-                  <li>Designed a modular workflow and editable report UI</li>
-                  <li><span class="fw-semibold">Reduced report generation</span> from 2 weeks to under 5 minutes</li>
-                </ul>
-                <div class="mt-3 d-flex flex-wrap gap-2">
-                  <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">ETL</span><span class="tag">Power BI</span><span class="tag">LaTeX</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="card soft-card h-100">
-              <div class="card-body">
-                <h3 class="h5">Medical emergency record classification</h3>
-                <div class="text-muted">Confidential project</div>
-                <ul class="mt-3 mb-0">
-                  <li>Built a pipeline using local language models, machine learning, and API queries</li>
-                  <li>Extracted epidemiological metrics from unstructured records while preserving privacy</li>
-                  <li>Reduced manual workload for healthcare staff</li>
-                </ul>
-                <div class="mt-3 d-flex flex-wrap gap-2">
-                  <span class="tag">Python</span><span class="tag">LLMs</span><span class="tag">NLP</span><span class="tag">APIs</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="card soft-card h-100">
-              <div class="card-body">
-                <h3 class="h5">PBJ: Poisson Boltzmann and Jupyter</h3>
-                <div class="text-muted">Bem4solvation, UTFSM</div>
-                <ul class="mt-3 mb-0">
-                  <li>Developed an early prototype of a one line solver for computational biophysics models</li>
-                  <li>Integrated with Jupyter workflows for fast parameter experimentation and reproducibility</li>
-                </ul>
-                <div class="mt-3 d-flex flex-wrap gap-2">
-                  <span class="tag">Python</span><span class="tag">Scientific Computing</span><span class="tag">Jupyter</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="card soft-card h-100">
-              <div class="card-body">
-                <h3 class="h5">Research presentation</h3>
-                <div class="text-muted">Workshop on Numerical Analysis of PDEs (UdeC)</div>
-                <ul class="mt-3 mb-0">
-                  <li>Modeled molecular thermal agitation using pseudo and quasi Monte Carlo</li>
-                  <li>Analyzed correlations across physical properties to generate new hypotheses</li>
-                </ul>
-                <div class="mt-3 d-flex flex-wrap gap-2">
-                  <span class="tag">Python</span><span class="tag">Monte Carlo</span><span class="tag">Modeling</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section class="section bg-soft" id="skills">
-      <div class="container">
-        <div class="section-title">
-          <h2 class="h3 mb-1">Skills</h2>
-          <p class="text-muted mb-0">Technologies grouped and separated.</p>
-        </div>
-
-        <div class="row g-4">
-          <div class="col-lg-4">
-            <div class="card soft-card h-100">
-              <div class="card-body">
-                <h3 class="h6">Languages</h3>
-                <div class="tech-grid">
-                  <span class="tech">Python</span>
-                  <span class="tech">SQL</span>
-                  <span class="tech">Bash</span>
-                  <span class="tech">JavaScript</span>
-                  <span class="tech">Ruby</span>
-                  <span class="tech">VBA</span>
-                  <span class="tech">MATLAB</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="card soft-card h-100">
-              <div class="card-body">
-                <h3 class="h6">Data and Analytics</h3>
-                <div class="tech-grid">
-                  <span class="tech">Pandas</span>
-                  <span class="tech">ETL</span>
-                  <span class="tech">Power BI</span>
-                  <span class="tech">DAX</span>
-                  <span class="tech">Excel</span>
-                  <span class="tech">Data validation</span>
-                  <span class="tech">Data visualization</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="card soft-card h-100">
-              <div class="card-body">
-                <h3 class="h6">Software and Platforms</h3>
-                <div class="tech-grid">
-                  <span class="tech">Git</span>
-                  <span class="tech">Jupyter</span>
-                  <span class="tech">LaTeX</span>
-                  <span class="tech">Bootstrap</span>
-                  <span class="tech">jQuery</span>
-                  <span class="tech">AWS (basic)</span>
-                  <span class="tech">MongoDB (basic)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Education -->
-    <section class="section" id="education">
-      <div class="container">
-        <div class="section-title">
-          <h2 class="h3 mb-1">Education</h2>
-          <p class="text-muted mb-0">Formal education and diplomas.</p>
-        </div>
-
-        <div class="row g-4">
-          <div class="col-lg-6">
-            <div class="card soft-card h-100">
-              <div class="card-body">
-                <h3 class="h5 mb-1">Mechanical Engineer (BS, PEng)</h3>
-                <div class="text-muted">Universidad Técnica Federico Santa María</div>
-                <div class="text-muted">2013 to 2021</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="card soft-card h-100">
-              <div class="card-body">
-                <h3 class="h6">Diplomas and courses</h3>
-                <ul class="mb-0">
-                  <li>Diploma in Data Engineering, Universidad de Santiago de Chile (Aug 2025)</li>
-                  <li>Diploma in Data Science, CORFO and Universidad del Desarrollo (Aug 2023)</li>
-                  <li>Best Practices for Software Development, MolSSI (May 2021)</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="section bg-soft" id="contact">
-      <div class="container">
-        <div class="section-title">
-          <h2 class="h3 mb-1">Contact</h2>
-          <p class="text-muted mb-0">Quick message form with validation.</p>
-        </div>
-
-        <div class="row g-4">
-          <div class="col-lg-5">
-            <div class="card soft-card h-100">
-              <div class="card-body">
-                <div class="mb-2"><span class="fw-semibold">Email:</span> <a href="mailto:magodoydiaz@gmail.com">magodoydiaz@gmail.com</a></div>
-                <div class="mb-2"><span class="fw-semibold">Phone:</span> <a href="tel:+56994755945">+56 9 9475 5945</a></div>
-                <div class="mb-2"><span class="fw-semibold">GitHub:</span> <a href="https://github.com/mgodoydiaz" target="_blank" rel="noreferrer">mgodoydiaz</a></div>
-                <div class="mb-0"><span class="fw-semibold">LinkedIn:</span> <a href="https://www.linkedin.com/in/magodoydiaz/" target="_blank" rel="noreferrer">/in/magodoydiaz</a></div>
-
-                <hr class="my-4" />
-
-                <p class="text-muted mb-0 small">
-                  Tip: you can host this on GitHub Pages. Keep these three files in the same folder.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-7">
-            <div class="card soft-card h-100">
-              <div class="card-body">
-                <form id="contactForm" novalidate>
-                  <div class="row g-3">
-                    <div class="col-md-6">
-                      <label class="form-label" for="name">Name</label>
-                      <input class="form-control" id="name" name="name" type="text" placeholder="Your name" required />
-                      <div class="invalid-feedback">Please enter your name.</div>
-                    </div>
-                    <div class="col-md-6">
-                      <label class="form-label" for="email">Email</label>
-                      <input class="form-control" id="email" name="email" type="email" placeholder="you@company.com" required />
-                      <div class="invalid-feedback">Please enter a valid email.</div>
-                    </div>
-                    <div class="col-12">
-                      <label class="form-label" for="message">Message</label>
-                      <textarea class="form-control" id="message" name="message" rows="4" placeholder="What can I help you build?" required></textarea>
-                      <div class="invalid-feedback">Please write a message.</div>
-                    </div>
-
-                    <div class="col-12 d-flex flex-wrap gap-2 align-items-center">
-                      <button class="btn btn-primary" type="submit">Send</button>
-                      <button class="btn btn-outline-secondary" type="button" id="clearForm">Clear</button>
-                      <span class="text-muted small" id="formHint">This demo validates locally. It does not send emails.</span>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <footer class="py-4">
-      <div class="container d-flex flex-wrap justify-content-between gap-2">
-        <div class="text-muted small">© <span id="year"></span> Miguel Godoy</div>
-        <div class="text-muted small">Built with HTML, CSS, Bootstrap, JavaScript, and jQuery</div>
-      </div>
-    </footer>
-
-    <!-- Toast -->
-    <div class="toast-container position-fixed bottom-0 end-0 p-3">
-      <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="toast-header">
-          <strong class="me-auto">CV</strong>
-          <small>now</small>
-          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-        </div>
-        <div class="toast-body" id="toastMsg">Done.</div>
-      </div>
-    </div>
-
-  </main>
-
-  <!-- jQuery + Bootstrap JS -->
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Scripts de Interactividad (Requisito de Evaluación) -->
   <script src="assets/js/script.js"></script>
 </body>
+
 </html>

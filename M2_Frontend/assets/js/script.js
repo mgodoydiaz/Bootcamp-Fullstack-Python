@@ -1,122 +1,83 @@
-/* global bootstrap */
+$(document).ready(function () {
 
-$(function () {
-  const $body = $("body");
+  // Evento 1: Modo Claro/Oscuro (Click)
+  $('#theme-toggle').click(function () {
+    $('body').toggleClass('dark-mode');
 
-  // Smooth scroll
-  $("a.nav-link").on("click", function (e) {
-    const href = $(this).attr("href");
-    if (!href || !href.startsWith("#")) return;
-
-    e.preventDefault();
-    const $target = $(href);
-    if ($target.length === 0) return;
-
-    const navH = $("#topNav").outerHeight() || 0;
-    const top = $target.offset().top - navH + 2;
-
-    $("html, body").animate({ scrollTop: top }, 450);
-
-    // Collapse navbar on mobile
-    const nav = document.getElementById("navLinks");
-    if (nav && nav.classList.contains("show")) {
-      bootstrap.Collapse.getOrCreateInstance(nav).hide();
-    }
-  });
-
-  // Active link highlighting on scroll
-  const sectionIds = ["#about", "#experience", "#projects", "#skills", "#education", "#contact"];
-  const $links = $("a.nav-link");
-
-  function updateActiveNav() {
-    const scrollPos = $(window).scrollTop() || 0;
-    const navH = $("#topNav").outerHeight() || 0;
-
-    let current = "#about";
-    for (const id of sectionIds) {
-      const $sec = $(id);
-      if ($sec.length === 0) continue;
-      const top = $sec.offset().top - navH - 10;
-      if (scrollPos >= top) current = id;
-    }
-
-    $links.removeClass("active");
-    $links.filter(`[href="${current}"]`).addClass("active");
-  }
-
-  $(window).on("scroll", updateActiveNav);
-  updateActiveNav();
-
-  // Theme toggle (event 1)
-  const savedTheme = localStorage.getItem("cv_theme");
-  if (savedTheme === "light") $body.addClass("light");
-
-  $("#themeToggle").on("click", function () {
-    $body.toggleClass("light");
-    localStorage.setItem("cv_theme", $body.hasClass("light") ? "light" : "dark");
-    toast($body.hasClass("light") ? "Light theme enabled" : "Dark theme enabled");
-  });
-
-  // Accent shuffle (event 2) changes colors in sections
-  const accents = [
-    "#4f8cff",
-    "#f97316",
-    "#a855f7",
-    "#22c55e",
-    "#06b6d4",
-    "#e11d48",
-  ];
-
-  $("#accentShuffle").on("click", function () {
-    const next = accents[Math.floor(Math.random() * accents.length)];
-    document.documentElement.style.setProperty("--accent", next);
-    toast("Accent updated");
-  });
-
-  // Footer year
-  $("#year").text(new Date().getFullYear());
-
-  // Contact form validation (event 3)
-  function validEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  }
-
-  $("#contactForm").on("submit", function (e) {
-    e.preventDefault();
-
-    const $name = $("#name");
-    const $email = $("#email");
-    const $msg = $("#message");
-
-    const nameOk = ($name.val() || "").trim().length >= 2;
-    const emailOk = validEmail(($email.val() || "").trim());
-    const msgOk = ($msg.val() || "").trim().length >= 10;
-
-    setValidity($name, nameOk);
-    setValidity($email, emailOk);
-    setValidity($msg, msgOk);
-
-    if (nameOk && emailOk && msgOk) {
-      toast("Looks good. Message validated locally.");
+    if ($('body').hasClass('dark-mode')) {
+      $(this).html('<i class="fas fa-sun"></i> Día');
+      $(this).removeClass('btn-outline-primary').addClass('btn-outline-light');
     } else {
-      toast("Please fix the highlighted fields.");
+      $(this).html('<i class="fas fa-moon"></i> Noche');
+      $(this).removeClass('btn-outline-light').addClass('btn-outline-primary');
     }
   });
 
-  $("#clearForm").on("click", function () {
-    $("#contactForm")[0].reset();
-    $(".is-invalid, .is-valid").removeClass("is-invalid is-valid");
+  // Evento 2: Animación al hacer Scroll
+  function reveal() {
+    var windowHeight = $(window).height();
+    var scrollTop = $(window).scrollTop();
+
+    $('.reveal').each(function () {
+      var elementOffset = $(this).offset().top;
+      // Si el elemento entra en la vista de la ventana
+      if (elementOffset < (scrollTop + windowHeight - 50)) {
+        $(this).addClass('active');
+      }
+    });
+  }
+
+  // Ejecutar al cargar y al hacer scroll
+  reveal();
+  $(window).scroll(function () {
+    reveal();
   });
 
-  function setValidity($el, ok) {
-    $el.toggleClass("is-valid", ok);
-    $el.toggleClass("is-invalid", !ok);
+  // Evento 3: Validación de Formulario en tiempo real (Input/Change)
+  function validarFormulario() {
+    let nombreValido = $('#nombre').val().trim().length > 0;
+    let email = $('#email').val().trim();
+    let emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+    // Mostrar/Ocultar error nombre
+    if (!nombreValido && $('#nombre').val().length > 0) {
+      $('#errorNombre').removeClass('d-none');
+    } else {
+      $('#errorNombre').addClass('d-none');
+    }
+
+    // Mostrar/Ocultar error email
+    if (!emailValido && email.length > 0) {
+      $('#errorEmail').removeClass('d-none');
+    } else {
+      $('#errorEmail').addClass('d-none');
+    }
+
+    // Habilitar botón si todo es válido
+    if (nombreValido && emailValido) {
+      $('#btnSubmit').prop('disabled', false);
+    } else {
+      $('#btnSubmit').prop('disabled', true);
+    }
   }
 
-  // Toast helper
-  function toast(message) {
-    $("#toastMsg").text(message);
-    const el = document.getElementById("liveToast");
-    bootstrap.Toast.getOrCreateInstance(el, { delay: 2200 }).show();
-  }
+  // Escuchar cambios en los inputs
+  $('#nombre, #email').on('input', validarFormulario);
+
+  // Simular envío de formulario
+  $('#contactForm').submit(function (e) {
+    e.preventDefault(); // Evitar recarga
+    $('#btnSubmit').html('<i class="fas fa-spinner fa-spin"></i> Enviando...').prop('disabled', true);
+
+    // Simular delay de servidor
+    setTimeout(function () {
+      $('#successMsg').removeClass('d-none');
+      $('#btnSubmit').html('Enviar Mensaje');
+      $('#contactForm')[0].reset();
+      validarFormulario(); // re-deshabilitar botón
+
+      // Ocultar mensaje de éxito después de 3 segundos
+      setTimeout(() => $('#successMsg').addClass('d-none'), 3000);
+    }, 1500);
+  });
 });

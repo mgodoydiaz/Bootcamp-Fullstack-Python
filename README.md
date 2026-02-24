@@ -10,6 +10,7 @@ Este repositorio contiene las evaluaciones finales de cada módulo del bootcamp.
 
 | Módulo | Descripción |
 |--------|-------------|
+| M2 - Fundamentos de Frontend | CV online disponible [aquí](https://mgodoydiaz.github.io/cv_online/) |
 | M5 - Bases de datos | Evaluación final del módulo de bases de datos |
 
 ## Tecnologías
