@@ -1,0 +1,11 @@
+Claudio Bravo,32,Arquero,0,9.5
+Gary Medel,27,Defensa,5
+Gonzalo Jara,29,Defensa,3
+Mauricio Isla,27,Defensa,3
+Eugenio Mena,26,Defensa,3
+Charles Aranguiz,26,Mediocampo,5
+Marcelo Diaz,28,Mediocampo,1
+Arturo Vidal,28,Mediocampo,10
+Jorge Valdivia,31,Mediocampo,7
+Eduardo Vargas,25,Delantero,15
+Alexis Sanchez,26,Delantero,25

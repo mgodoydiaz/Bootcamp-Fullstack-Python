@@ -1,0 +1,11 @@
+Claudio Bravo,32,Arquero,0,9.5
+Francisco Silva,29,Mediocampo,0
+Marcelo Diaz,28,Mediocampo,1
+Gary Medel,27,Defensa,5
+Mauricio Isla,27,Defensa,3
+Charles Aranguiz,26,Mediocampo,5
+Arturo Vidal,28,Mediocampo,10
+Jean Beausejour,31,Mediocampo,6
+Jorge Valdivia,31,Mediocampo,7
+Alexis Sanchez,26,Delantero,25
+Eduardo Vargas,25,Delantero,15
