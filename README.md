@@ -11,7 +11,7 @@ Este repositorio contiene las evaluaciones finales de cada módulo del bootcamp.
 | Módulo | Descripción |
 |--------|-------------|
 | M2 - Fundamentos de Frontend | Evaluación: CV online disponible [aquí](https://mgodoydiaz.github.io/cv_online/) |
-| M3 - Python Básico | Evaluación final: Dr Python (Sist. interactivo por consola)|
+| M3 - Python Básico | Evaluación final: Dr Python (Sist. interactivo por consola) |
 | M4 - Python Avanzado | Evaluación final: Sist. Gestión de Jugadores de Fútbol (POO) |
 | M5 - Bases de datos | Evaluación final: Base de datos de una clínica veterinaria |
 
